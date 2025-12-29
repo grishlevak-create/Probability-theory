@@ -1,9 +1,15 @@
+import math
 from scipy.stats import binom, poisson, norm
 from numpy import sqrt
 
 
+# Пуассон
+print(sum(poisson.pmf(range(4), mu=1200*0.002))) 
+# Сочетания
+# print(math.comb(8,2)*math.comb(6,2) / math.comb(14,4))
 
-print(sum(poisson.pmf(range(2, 12001), mu=12000*0.0005)))
+# М-Л
+# print(norm.pdf(x) / sqrt(npm))
 
-# Проверка
-print(sum(binom.pmf(range(2, 12001), 12000, 0.0005)))
+# Интегральный М-Л
+# print(sum(binom.pmf(range(210, 231), 300, 0.75)))
